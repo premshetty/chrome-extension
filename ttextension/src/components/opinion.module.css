@@ -41,3 +41,8 @@
   font-size: 18px;
   font-weight: bold;
 }
+.yellow {
+  color: black;
+  background-color: yellow;
+  padding: 5px;
+}

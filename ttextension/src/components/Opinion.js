@@ -78,11 +78,12 @@ function Opinion() {
           />
         </p>
       </div>
-      <pre
-        onCanPlayCapture={(e) => setText(e.target.innerHtml)}
-        className={classes.textarea}
-      >
-        {`Dear Team
+      <div>
+        <pre
+          onCanPlayCapture={(e) => setText(e.target.innerHtml)}
+          className={classes.textarea}
+        >
+          {`Dear Team
 
 Greetings From Treatment Traveller!!
 
@@ -103,9 +104,12 @@ Current Symptoms:   ${symptoms}
 What treatment plan has been suggested by the doctors in their country –
  
 Country:  ${country}
-
-Kindly suggest the cost estimation and ’s opinion. URGENT!`}
-      </pre>
+`}
+          <pre className={classes.yellow}>
+            Kindly suggest the cost estimation and ’s opinion. URGENT!
+          </pre>
+        </pre>
+      </div>
       <button
         onClick={() => {
           navigator.clipboard.writeText(text);

@@ -16,3 +16,34 @@
   color: white;
   border-radius: 15px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  align-items: center;
+}
+.form p {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+}
+.form p > span {
+  width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.form p > input,
+.form p > select {
+  width: 300px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.yellow {
+  color: black;
+  background-color: yellow;
+  padding: 5px;
+}
