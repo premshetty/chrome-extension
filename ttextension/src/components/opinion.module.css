@@ -1,0 +1,43 @@
+.opinion {
+  width: 700px;
+  margin: auto;
+}
+.textarea {
+  height: 500px;
+  width: 100%;
+}
+.opinion > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  background-color: var(--sucess-color);
+  padding: 10px 0;
+  color: white;
+  border-radius: 15px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  align-items: center;
+}
+.form p {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+}
+.form p > span {
+  width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.form p > input,
+.form p > select {
+  width: 300px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}

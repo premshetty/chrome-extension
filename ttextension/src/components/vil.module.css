@@ -1,0 +1,18 @@
+.vil {
+  width: 700px;
+  margin: auto;
+}
+.textarea {
+  height: 500px;
+  width: 100%;
+}
+.vil > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  background-color: var(--primary-color);
+  padding: 10px 0;
+  color: white;
+  border-radius: 15px;
+}
