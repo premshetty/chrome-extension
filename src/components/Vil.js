@@ -50,8 +50,8 @@ function Vil() {
         <p>
           <span>Appointment Date : </span>
           <input
-            type="date"
-            placeholder="Passport Number "
+            type="text"
+            placeholder="Appointment date "
             onChange={(e) => Handlechange(e, setAppointmentDate)}
           />
         </p>

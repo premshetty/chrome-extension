@@ -10,6 +10,7 @@ function Opinion() {
   const [patientGender, setpatientGender] = useState("");
   const [symptoms, setsymptoms] = useState("");
   const [country, setcountry] = useState("");
+  const [department, setdepartment] = useState("");
   const Handlechange = (e, setter) => {
     setter(e.target.value);
   };
@@ -77,6 +78,14 @@ function Opinion() {
             onChange={(e) => Handlechange(e, setcountry)}
           />
         </p>
+        <p>
+          <span> Department : </span>
+          <input
+            type="text"
+            placeholder="Department "
+            onChange={(e) => Handlechange(e, setdepartment)}
+          />
+        </p>
       </div>
       <div>
         <pre
@@ -106,7 +115,7 @@ What treatment plan has been suggested by the doctors in their country –
 Country:  ${country}
 `}
           <pre className={classes.yellow}>
-            Kindly suggest the cost estimation and ’s opinion. URGENT!
+            {` Kindly suggest the cost estimation and ${department}'s opinion. URGENT!`}
           </pre>
         </pre>
       </div>

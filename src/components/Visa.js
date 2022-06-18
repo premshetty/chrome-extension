@@ -59,7 +59,7 @@ function Visa() {
         <p>
           <span> Appointment Date : </span>
           <input
-            type="date"
+            type="text"
             placeholder="Appointment Date"
             onChange={(e) => Handlechange(e, setAppointmentDate)}
           />
@@ -82,7 +82,7 @@ Please find the tickets and arrival details of the below-mentioned patient:
 
 Patient Name:  ${name}
 
-Patient will arrive on ${arrivalDate.split("-").reverse().join("-")} 
+Patient will arrive on ${arrivalDate} 
 
 at ${arrivalHour} by ${airline} Airlines.
 
