@@ -1,6 +1,11 @@
 # To use this extension 
 
-### clone this repository and run build command
+### clone this repository to your local
+
+# first install the dependesies using 
+ `npm i` 
+ # run build command
+ 
 `npm run build`
 
 ## After that you will get a `build` folder 
