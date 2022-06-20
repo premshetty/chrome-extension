@@ -13,7 +13,7 @@ function Visa() {
   };
   return (
     <div className={classes.visa}>
-      <h1>Visa</h1>
+      <h1>Arrival</h1>
       <div className={classes.form}>
         <p>
           <span> Patient Name : </span>

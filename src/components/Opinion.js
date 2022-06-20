@@ -7,7 +7,7 @@ function Opinion() {
   const [age, setage] = useState("");
   const [problem, setproblem] = useState("");
   const [caseHistory, setcaseHistory] = useState("");
-  const [patientGender, setpatientGender] = useState("");
+
   const [symptoms, setsymptoms] = useState("");
   const [country, setcountry] = useState("");
   const [department, setdepartment] = useState("");
@@ -30,21 +30,10 @@ function Opinion() {
         <p>
           <span> Age : </span>
           <input
-            type="Number"
+            type="text"
             placeholder="patient Age "
             onChange={(e) => Handlechange(e, setage)}
           />
-        </p>
-        <p>
-          <span> Patient Gender : </span>
-          <select onChange={(e) => Handlechange(e, setpatientGender)}>
-            <option value="male" key="male">
-              male
-            </option>
-            <option value="female" key="female">
-              female
-            </option>
-          </select>
         </p>
         <p>
           <span> Health Problem : </span>
@@ -100,9 +89,7 @@ Please find the attached RX DETAILS of the below-mentioned patient:
 
 Patient Name: ${name}
 
-Age: ${age}  
-
-Gender : ${patientGender}
+Age / Gender : ${age}
 
 Health Problem: ${problem}
 
@@ -119,13 +106,6 @@ Country:  ${country}
           </pre>
         </pre>
       </div>
-      <button
-        onClick={() => {
-          navigator.clipboard.writeText(text);
-        }}
-      >
-        Copy to clipboard !!
-      </button>
     </div>
   );
 }

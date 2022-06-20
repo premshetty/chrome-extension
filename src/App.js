@@ -12,6 +12,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <a
+          style={{ color: "black", width: "100px", textAlign: "center" }}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://chrome-extension-five.vercel.app/"
+        >
+          <h2> need web version ? </h2>
+        </a>
         <div className="radio-group">
           <label className="radio1">
             <input
@@ -27,7 +35,7 @@ function App() {
               name="radio-group"
               onClick={() => handlechange(<Visa />)}
             />
-            <span>VISA</span>
+            <span>Arrival</span>
           </label>
           <label className="radio3">
             <input

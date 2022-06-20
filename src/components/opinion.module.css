@@ -5,6 +5,8 @@
 .textarea {
   height: 500px;
   width: 100%;
+  font-size: 16px;
+  font-weight: 500;
 }
 .opinion > h1 {
   text-align: center;
@@ -22,6 +24,7 @@
   align-items: flex-start;
   width: 80%;
   align-items: center;
+  margin: auto;
 }
 .form p {
   display: grid;

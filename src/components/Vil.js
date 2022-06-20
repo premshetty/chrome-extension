@@ -75,7 +75,7 @@ Passport Number: ${Attendentpassportnumber}
 
 Appointment Date: ${AppointmentDate.split("-").reverse().join("-")}
 
-Doctor Name : ${DoctorName}
+Appointment With : ${DoctorName}
 
 Kindly share the VIL below mentioned also:
 
