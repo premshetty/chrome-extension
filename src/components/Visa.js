@@ -73,7 +73,7 @@ function Visa() {
           />
         </p>
       </div>
-      <pre className={classes.textarea}>
+      <pre style={{ paddingBottom: "100px" }} className={classes.textarea}>
         {`Dear team, 
  
 Greetings from Treatment Traveller!

@@ -84,7 +84,6 @@ Health Problem: ${problem}
 Case History:   ${caseHistory}
 
 
-What treatment plan has been suggested by the doctors in their country –
  
 Country:  ${country}
 `}

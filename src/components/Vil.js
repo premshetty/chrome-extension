@@ -8,6 +8,8 @@ function Vil() {
   const [AppointmentDate, setAppointmentDate] = useState("");
   const [DoctorName, setDoctorName] = useState("");
   const [country, setcountry] = useState("");
+  const [Attendent2, setAttendent2] = useState("");
+  const [Attendentpassportnumber2, setAttendentpassportnumber2] = useState("");
   const Handlechange = (e, setter) => {
     setter(e.target.value);
   };
@@ -49,6 +51,22 @@ function Vil() {
           />
         </p>
         <p>
+          <span> Attendent Name : </span>
+          <input
+            type="text"
+            placeholder="Attendent Name "
+            onChange={(e) => Handlechange(e, setAttendent2)}
+          />
+        </p>
+        <p>
+          <span> Passport Number : </span>
+          <input
+            type="text"
+            placeholder="Passport Number "
+            onChange={(e) => Handlechange(e, setAttendentpassportnumber2)}
+          />
+        </p>
+        <p>
           <span>Appointment Date : </span>
           <input
             type="text"
@@ -73,7 +91,7 @@ function Vil() {
           />
         </p>
       </div>
-      <pre className={classes.textarea}>
+      <pre style={{ paddingBottom: "100px" }} className={classes.textarea}>
         {`
 
 
@@ -89,6 +107,10 @@ Attendant Name: ${Attendentname}
 
 Passport Number: ${Attendentpassportnumber}
 
+Attendant Name: ${Attendent2}
+
+Passport Number: ${Attendentpassportnumber2}
+
 Appointment Date with: ${DoctorName}  ${AppointmentDate.split("-")
           .reverse()
           .join("-")} 
@@ -97,7 +119,7 @@ Appointment Date with: ${DoctorName}  ${AppointmentDate.split("-")
 
 Kindly share the VIL below mentioned also:
 
-Kindly also share the VIL to:
+
 
 To: Indian Embassy ${country}
 
