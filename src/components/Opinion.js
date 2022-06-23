@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import classes from "./opinion.module.css";
 
 function Opinion() {
-  const [text, setText] = useState("");
   const [name, setname] = useState("");
   const [age, setage] = useState("");
   const [problem, setproblem] = useState("");
   const [caseHistory, setcaseHistory] = useState("");
 
-  const [symptoms, setsymptoms] = useState("");
   const [country, setcountry] = useState("");
   const [department, setdepartment] = useState("");
   const Handlechange = (e, setter) => {
@@ -51,14 +49,7 @@ function Opinion() {
             onChange={(e) => Handlechange(e, setcaseHistory)}
           />
         </p>
-        <p>
-          <span> Symptoms : </span>
-          <input
-            type="text"
-            placeholder="Symptoms "
-            onChange={(e) => Handlechange(e, setsymptoms)}
-          />
-        </p>
+
         <p>
           <span> Country : </span>
           <input
@@ -77,11 +68,8 @@ function Opinion() {
         </p>
       </div>
       <div>
-        <pre
-          onCanPlayCapture={(e) => setText(e.target.innerHtml)}
-          className={classes.textarea}
-        >
-          {`Dear Team
+        <pre className={classes.textarea}>
+          {`Dear Team ,
 
 Greetings From Treatment Traveller!!
 
@@ -95,7 +83,6 @@ Health Problem: ${problem}
 
 Case History:   ${caseHistory}
 
-Current Symptoms:   ${symptoms}
 
 What treatment plan has been suggested by the doctors in their country –
  

@@ -7,6 +7,7 @@ function Vil() {
   const [Attendentpassportnumber, setAttendentpassportnumber] = useState("");
   const [AppointmentDate, setAppointmentDate] = useState("");
   const [DoctorName, setDoctorName] = useState("");
+  const [country, setcountry] = useState("");
   const Handlechange = (e, setter) => {
     setter(e.target.value);
   };
@@ -63,25 +64,44 @@ function Vil() {
             onChange={(e) => Handlechange(e, setDoctorName)}
           />
         </p>
+        <p>
+          <span> Country : </span>
+          <input
+            type="text"
+            placeholder="Country"
+            onChange={(e) => Handlechange(e, setcountry)}
+          />
+        </p>
       </div>
       <pre className={classes.textarea}>
-        {`Please find the attached passport of the below-mentioned patient & his attendant:
+        {`
+
+
+Dear Team ,
+
+Please find the attached passport of the below-mentioned patient & his attendant:
 
 Patient Name: ${name}
+
 Passport Number: ${passportnumber}
 
 Attendant Name: ${Attendentname}
+
 Passport Number: ${Attendentpassportnumber}
 
-Appointment Date: ${AppointmentDate.split("-").reverse().join("-")}
+Appointment Date with: ${DoctorName}  ${AppointmentDate.split("-")
+          .reverse()
+          .join("-")} 
 
-Appointment With : ${DoctorName}
+
 
 Kindly share the VIL below mentioned also:
 
-To: Indian Embassy 
+Kindly also share the VIL to:
 
-Kindly also share the VIL to:`}
+To: Indian Embassy ${country}
+
+`}
       </pre>
     </div>
   );
