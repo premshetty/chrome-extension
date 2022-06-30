@@ -49,3 +49,16 @@
   background-color: yellow;
   padding: 5px;
 }
+.button {
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid green;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.button:hover {
+  background-color: green;
+  color: white;
+}

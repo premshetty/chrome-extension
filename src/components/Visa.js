@@ -11,6 +11,12 @@ function Visa() {
   const Handlechange = (e, setter) => {
     setter(e.target.value);
   };
+  const copytoClipBoard = () => {
+    let inputElement = document.getElementById("textcontent");
+    let text = inputElement.innerText;
+    navigator.clipboard.writeText(text);
+  };
+
   return (
     <div className={classes.visa}>
       <h1>Arrival</h1>
@@ -73,7 +79,11 @@ function Visa() {
           />
         </p>
       </div>
-      <pre style={{ paddingBottom: "100px" }} className={classes.textarea}>
+      <pre
+        id="textcontent"
+        style={{ paddingBottom: "100px" }}
+        className={classes.textarea}
+      >
         {`Dear team, 
  
 Greetings from Treatment Traveller!
@@ -102,6 +112,9 @@ After the pick up the patient will go with Pankaj.
  
 kindly drop the Pankaj back to his address. His contact no- (+917782905322)`}
       </pre>
+      <button className={classes.button} onClick={copytoClipBoard}>
+        copy
+      </button>
     </div>
   );
 }

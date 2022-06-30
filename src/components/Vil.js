@@ -13,6 +13,12 @@ function Vil() {
   const Handlechange = (e, setter) => {
     setter(e.target.value);
   };
+  const copytoClipBoard = () => {
+    let inputElement = document.getElementById("textcontent");
+    let text = inputElement.innerText;
+    navigator.clipboard.writeText(text);
+  };
+
   return (
     <div className={classes.vil}>
       <h1>VIL</h1>
@@ -91,7 +97,11 @@ function Vil() {
           />
         </p>
       </div>
-      <pre style={{ paddingBottom: "100px" }} className={classes.textarea}>
+      <pre
+        id="textcontent"
+        style={{ paddingBottom: "100px" }}
+        className={classes.textarea}
+      >
         {`
 
 
@@ -125,6 +135,9 @@ To: Indian Embassy ${country}
 
 `}
       </pre>
+      <button className={classes.button} onClick={copytoClipBoard}>
+        copy
+      </button>
     </div>
   );
 }

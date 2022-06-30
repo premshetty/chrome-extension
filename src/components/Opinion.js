@@ -12,6 +12,12 @@ function Opinion() {
   const Handlechange = (e, setter) => {
     setter(e.target.value);
   };
+  const copytoClipBoard = () => {
+    let inputElement = document.getElementById("textcontent");
+    let text = inputElement.innerText;
+    navigator.clipboard.writeText(text);
+  };
+
   console.log(name);
   return (
     <div className={classes.opinion}>
@@ -68,7 +74,7 @@ function Opinion() {
         </p>
       </div>
       <div>
-        <pre className={classes.textarea}>
+        <pre className={classes.textarea} id="textcontent">
           {`Dear Team ,
 
 Greetings From Treatment Traveller!!
@@ -86,11 +92,13 @@ Case History:   ${caseHistory}
 
  
 Country:  ${country}
-`}
-          <pre className={classes.yellow}>
-            {` Kindly suggest the cost estimation and ${department}'s opinion. URGENT!`}
-          </pre>
+
+
+ Kindly suggest the cost estimation and ${department}'s opinion. URGENT!`}
         </pre>
+        <button className={classes.button} onClick={copytoClipBoard}>
+          copy
+        </button>
       </div>
     </div>
   );
